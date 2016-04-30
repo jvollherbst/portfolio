@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
 
+
   def index
     @images = Image.all
   end
@@ -21,7 +22,7 @@ class ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:imgname, :category, :tag, :description, :imgurl)
+    params.require(:image).permit(:imgname, :category, :tag, :description, :imgurl, :image)
   end
 
 end
