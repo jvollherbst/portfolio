@@ -1,6 +1,6 @@
-class CreateImages < ActiveRecord::Migration
+class CreateWorks < ActiveRecord::Migration
   def change
-    create_table :images do |t|
+    create_table :works do |t|
       t.string :imgname
       t.string :category
       t.string :tag
