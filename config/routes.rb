@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root to: 'images#index'
   resources :images
   resources :users
+  resources :about, only: :index
 
   # get 'users/new' => 'users#new'
 

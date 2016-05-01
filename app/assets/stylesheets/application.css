@@ -32,6 +32,7 @@
  h5,
  h6 {
    font-family: 'Lato',  sans-serif;
+   font-weight: normal;
  }
 
  a {
@@ -42,28 +43,27 @@
   position: fixed;
   width: 100%;
   height: 4em;
-  color: #333f49;
-  background-color: #e6eaec;
-  border-bottom: 2px solid #091a24;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #0015FF;
   padding: 0 2em;
   top: 0;
   z-index: 999;
 }
 
 header a {
-  color: #333f49;
+  color: #0015FF;
 }
 
 header a:hover {
   transition: border-width 100ms ease-out;
-  border-bottom: .25em solid #ee4b24;
+  border-bottom: .25em solid #0015FF;
 }
 
 .logo {
   float:left;
-  height: 2em;
-  line-height: 2em;
-  font-size: 1.75em;
+  height: 2.5em;
+  line-height: 2.5em;
+  font-size: 1.5em;
   margin: 0;
   letter-spacing: .05em;
 }
@@ -75,7 +75,7 @@ nav {
 }
 
 nav ul {
-  font-size: 1.125em;
+  font-size: 1em;
   padding: 0;
   line-height: 4em;
   margin: 0 1em;
@@ -90,6 +90,11 @@ nav li {
  .container {
   width: 60em;
   margin: 0 auto;
+  margin-top: 6em;
+}
+
+.port-content {
+  background-color: red;
 }
 
  .thumbnail img{
@@ -101,8 +106,12 @@ nav li {
    margin: 1em 2em;
  }
 
+ .thumbnail img:hover {
+   opacity: .5;
+ }
+
  .port-img img {
-   width: 50%;
+   width: 100%;
  }
 
  footer{
@@ -112,7 +121,7 @@ nav li {
    bottom: -20em;
    left: 0;
    margin-bottom: -20em;
-   background-color: #333333;
+   background-color: #CC7062;
    clear: both;
  }
 
