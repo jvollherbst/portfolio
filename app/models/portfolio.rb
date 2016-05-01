@@ -1,6 +1,6 @@
-class UsersController < ApplicationController
+class PortfolioController < ApplicationController
 
   belongs_to :image
-  validates :imgname, presence: true
+  validates :imgname, :tag, presence: true
 
 end
