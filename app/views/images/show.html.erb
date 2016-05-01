@@ -1,10 +1,6 @@
 <h1>Image Show</h1>
-
-   <ul>
-     <li><%= @image.imgname %></li>
-     <li><%= @image.category %></li>
-     <li><%= @image.tag %></li>
-     <li><%= @image.description %></li>
-     <li><%= @image.imgurl %></li>
-     <li><%= image_tag @image.image.url %></li>
-   </ul>
+     <div><%= @image.imgname %></div>
+     <div><%= @image.category %></div>
+     <div><%= @image.tag %></div>
+     <div><%= @image.description %></div>
+     <div class="port-img"><img src="<%= asset_path @image.imgurl %>" /></div>
