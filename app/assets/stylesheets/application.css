@@ -23,6 +23,8 @@
     font-weight: 400;
     background-color: #f6f6f6;
     color: #444444;
+    line-height: 1.75em;
+
   }
 
  h1,
@@ -34,6 +36,7 @@
  nav {
    font-family: 'Lato',  sans-serif;
    font-weight: normal;
+   color: #444444;
  }
 
  a {
@@ -92,6 +95,7 @@ nav li {
   width: 60em;
   margin: 0 auto;
   margin-top: 6em;
+  text-align: center;
 }
 
  .thumbnail img{
@@ -99,13 +103,22 @@ nav li {
    width: 15em;
    height: 15em;
    object-fit: cover;
-   padding: 1em;
    margin: 1em 2em;
  }
 
  .thumbnail img:hover {
-   opacity: .5;
+   /*opacity: .75;*/
+   transition: border-width 200ms ease-in-out;
+   border: .5em solid #CC7062;
  }
+/*
+ .image-name {
+   background-color: red;
+   padding: 0;
+   margin: 1em;
+   width: 1.5em;
+   height: 1em;
+ }*/
 
  .port-descr {
    width: 100%;
@@ -114,6 +127,12 @@ nav li {
 
  .port-img img {
    width: 100%;
+ }
+
+ .about {
+   width: 75%;
+   margin: 0 auto;
+   text-align: left;
  }
 
  footer{
@@ -128,7 +147,7 @@ nav li {
  }
 
  footer > p{
-   color: #333f49;
+   color: #f7f7f7;
  }
 
  .footer-newsletter{
@@ -140,8 +159,8 @@ nav li {
 
  .footer-col{
    display: inline-block;
-   padding-left: 1em;
-   color: #cccccc;
+   padding: 1em;
+   color: #f7f7f7;
  }
 
 
