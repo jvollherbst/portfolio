@@ -22,7 +22,7 @@
     font-family: 'Merriweather', serif;
     font-weight: 400;
     background-color: #f6f6f6;
-    color: #333333;
+    color: #444444;
   }
 
  h1,
@@ -30,7 +30,8 @@
  h3,
  h4,
  h5,
- h6 {
+ h6,
+ nav {
    font-family: 'Lato',  sans-serif;
    font-weight: normal;
  }
@@ -93,10 +94,6 @@ nav li {
   margin-top: 6em;
 }
 
-.port-content {
-  background-color: red;
-}
-
  .thumbnail img{
    float: left;
    width: 15em;
@@ -108,6 +105,11 @@ nav li {
 
  .thumbnail img:hover {
    opacity: .5;
+ }
+
+ .port-descr {
+   width: 100%;
+   margin-bottom: 3em;
  }
 
  .port-img img {
@@ -156,8 +158,55 @@ nav li {
      width: 100%;
    }
 
+   .container h1, img {
+     padding: 0 1em;
+   }
+
+   header {
+     max-width: 100%;
+     margin: 0;
+     padding: 0;
+   }
+
+   .logo {
+     float: none;
+     text-align: center;
+     margin: 0;
+     padding: 0;
+   }
+
+   .logo h1 {
+     margin: 0;
+   }
+
+   nav {
+     max-width: 100%;
+     float: none;
+     display: none;
+   }
+
+   nav:hover {
+     display: inline;
+   }
+
+
+   .thumbnail img {
+     float: none;
+     padding: 0;
+     width: 20em;
+     height: 20em;
+     object-fit: cover;
+   }
+
+   .port-descr h2, p {
+     padding: 0 1em;
+   }
+
    footer{
+    width: 100%;
     text-align: center;
+    margin: 0;
+    padding: 0;
   }
 
   .footer-col{

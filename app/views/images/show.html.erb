@@ -1,7 +1,8 @@
-<div class="port-content">
-     <div><%= @image.imgname %></div>
-     <div><%= @image.category %></div>
-     <div><%= @image.tag %></div>
-     <div><%= @image.description %></div>
-     <div class="port-img"><img src="<%= asset_path @image.imgurl %>" /></div>
-</div>
+    <div class="port-descr">
+     <h2><%= @image.imgname %></h2>
+     <p><%= @image.description %></p>
+    </div>
+
+    <div class="port-img">
+      <img src="<%= asset_path @image.imgurl %>" />
+    </div>
