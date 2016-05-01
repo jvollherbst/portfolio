@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PortfolioApp</title>
+  <title>Jasmine Vollherbst</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300,300italic|Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<header>
+  <h1 class="logo"><%= link_to "Jasmine Vollherbst", root_path %></h1>
 
-<%= yield %>
+  <nav>
+    <ul>
+  <% if session[:current_user_id] %>
+  <li><%= link_to "Welcome #{User.find(session[:current_user_id]).username}",   user_path(session[:current_user_id]) %></li>
+  <li><%= link_to "Create", new_image_path %></li>
+  <li><%= link_to "Logout", sessions_path, method: :delete %></li>
+  <% else %>
 
+  <li><%= link_to "Login", users_path %></li>
+
+  <% end %>
+  </ul>
+  </nav>
+</header>
+<div class="wrapper">
+
+ <%= yield %>
+</div>
+<footer>
+  <div class="footer-newsletter">
+    <div class="footer-col">
+
+  </div>
+</div>
+</footer>
 </body>
 </html>

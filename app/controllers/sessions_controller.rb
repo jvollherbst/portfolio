@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
 
-      redirect_to images_new_path
+      redirect_to new_image_path
 
     else
       redirect_to root_path

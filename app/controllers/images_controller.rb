@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
 
+  before_action :authenticate, only: :new
 
   def index
     @images = Image.all
