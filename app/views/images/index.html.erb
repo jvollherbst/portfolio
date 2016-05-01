@@ -1,12 +1,5 @@
 <h1>Images</h1>
 
 <% @images.each do |i| %>
-   <ul>
-     <li><%= i.imgname %></li>
-     <li><%= i.category %></li>
-     <li><%= i.tag %></li>
-     <li><%= i.description %></li>
-     <li><%= i.imgurl %></li>
-     <li><%= image_tag i.image.url %></li>
-   </ul>
+     <div class="thumbnail"><a href="<%=image_path(i)%>"><%= image_tag i.image.url %></a></div>
  <% end %>

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ .thumbnail img{
+   float: left;
+   width: 15em;
+   height: 15em;
+   object-fit: cover;
+   padding: 1em;
+   margin: 1em 2em;
+ }
+/*
+.thumbnail img {
+  width: 50%;
+}*/
