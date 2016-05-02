@@ -6,3 +6,7 @@
     <div class="port-img">
       <img src="<%= asset_path @image.imgurl %>" />
     </div>
+<% if session[:current_user_id] %>
+<p><%= link_to 'Edit', edit_image_path(@image) %></p>
+<p><%= link_to 'Delete', image_path(@image), method: :delete %></p>
+<% end %>
