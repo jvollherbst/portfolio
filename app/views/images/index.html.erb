@@ -1,4 +1,4 @@
 
 <% @images.each do |i| %>
-     <div class="thumbnail"><a href="<%=image_path(i)%>"><%= image_tag i.image.url %></a></div>
+     <div class="thumbnail"><a href="<%=image_path(i)%>"><img src="<%= asset_path i.imgurl %>" /></a></div>
  <% end %>
