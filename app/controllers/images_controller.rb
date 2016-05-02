@@ -39,7 +39,7 @@ class ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:imgname, :category, :tag, :description, :imgurl)
+    params.require(:image).permit(:imgname, :category, :tag, :description, :imgurl, :thumb)
   end
 
 end

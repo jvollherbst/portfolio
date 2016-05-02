@@ -3,5 +3,5 @@ class Image < ActiveRecord::Base
   #
   # validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  validates :imgname, :category, :tag, :description, :imgurl, presence: true
+  validates :imgname, :category, :tag, :description, :imgurl, :thumb, presence: true
 end
