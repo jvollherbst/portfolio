@@ -92,7 +92,7 @@ nav li {
 }
 
  .container {
-  width: 60em;
+  width: 40em;
   margin: 0 auto;
   margin-top: 6em;
   text-align: center;
@@ -179,10 +179,10 @@ nav li {
 
  @media only screen and (max-width : 480px) {
    .container {
-     width: 100%;
+     width: 95%;
    }
 
-   .container h1, img {
+   .container h1 {
      padding: 0 1em;
    }
 
