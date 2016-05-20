@@ -92,7 +92,7 @@ nav li {
 }
 
  .container {
-  width: 40em;
+  width: 60em;
   margin: 0 auto;
   margin-top: 6em;
   text-align: center;
@@ -103,12 +103,12 @@ nav li {
    width: 15em;
    height: 15em;
    object-fit: cover;
-   margin: 1em 2em;
+   margin: 3em;
  }
 
  .thumbnail img:hover {
    /*opacity: .75;*/
-   transition: border-width 200ms ease-in-out;
+   transition: border-width 200ms ease-in;
    border: .5em solid #CC7062;
  }
 /*
@@ -126,7 +126,7 @@ nav li {
  }
 
  .port-img img {
-   width: 100%;
+   width: 75%;
  }
 
  .about {
