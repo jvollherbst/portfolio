@@ -1,9 +1,10 @@
 <div class="container">
 
   <h2 class="homepage">Jasmine is a web developer and designer <br />working at the intersection of art and technology. </h2>
+  
+</div>
 
 
 <% @images.each do |i| %>
      <div class="thumbnail"><a href="<%=image_path(i)%>"><img src="<%= asset_path i.thumb %>" /></a></div>
  <% end %>
-</div>
