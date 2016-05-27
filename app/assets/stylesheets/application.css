@@ -39,6 +39,15 @@
    color: #444444;
  }
 
+ .homepage {
+   font-family: 'Merriweather', serif;
+   font-weight: 400;
+   color: #555555;
+   font-size: 1.5em;
+   line-height: 2em;
+   padding: 2em;
+ }
+
  a {
    text-decoration: none;
  }
@@ -55,12 +64,13 @@
 }
 
 header a {
-  color: #0015FF;
+  color: #6AA2B8;
+  /*color: #0015FF;*/
 }
 
 header a:hover {
   transition: border-width 100ms ease-out;
-  border-bottom: .25em solid #0015FF;
+  border-bottom: .25em solid #6AA2B8;
 }
 
 .logo {
@@ -100,10 +110,9 @@ nav li {
 
  .thumbnail img{
    float: left;
-   width: 15em;
-   height: 15em;
+   width: 33.3%;
+   height: 33.3%;
    object-fit: cover;
-   margin: 2em;
  }
 
  .port-descr {
@@ -128,7 +137,7 @@ nav li {
    bottom: -20em;
    left: 0;
    margin-bottom: -20em;
-   background-color: #0015FF;
+   background-color: #6AA2B8;
    clear: both;
  }
 
