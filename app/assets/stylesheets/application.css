@@ -129,7 +129,14 @@ nav li {
    margin: 0 auto;
    text-align: left;
  }
-
+ .new-position {
+   position: fixed;
+   top: 110px;
+   right: 25px;
+   text-align: left;
+   width: 250px;
+   transition: top .5s ease;
+ }
  footer{
    position: relative;
    width: 100%;
