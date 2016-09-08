@@ -3,8 +3,17 @@
   <h2 class="homepage">Jasmine is a web developer and designer <br />working at the intersection of art and technology. </h2>
 
 </div>
+<div>
+  <select id="categories">
+    <option>All</option>
+    <option>design</option>
+    <option>logo</option>
+    <option>illustration</option>
+  </select>
+</div>
 
-
+<div id="thumbs">
 <% @images.each do |i| %>
-     <div class="thumbnail"><a href="<%=image_path(i)%>"><img src="<%= asset_path i.thumb %>" /></a></div>
+     <div class="thumbnail <%= i.category %>"><a href="<%=image_path(i)%>"><img src="<%= asset_path i.thumb %>" class="img-thumb" /></a></div>
  <% end %>
+</div>

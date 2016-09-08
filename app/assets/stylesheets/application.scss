@@ -1,18 +1,12 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require_tree .
  *= require_self
  */
+ @mixin underline {
+   transition: border-width 200ms ease-out;
+   border-bottom: .25em solid #6AA2B8;
+ }
+
  html, body {
     padding: 0;
     margin: 0;
@@ -52,7 +46,7 @@
    text-decoration: none;
  }
 
- header {
+header {
   position: fixed;
   width: 100%;
   height: 4em;
@@ -61,16 +55,13 @@
   padding: 0 2em;
   top: 0;
   z-index: 999;
-}
 
-header a {
-  color: #6AA2B8;
-  /*color: #0015FF;*/
-}
-
-header a:hover {
-  transition: border-width 100ms ease-out;
-  border-bottom: .25em solid #6AA2B8;
+  a {
+    color: #6AA2B8;
+  }
+  a:hover {
+    @include underline
+  }
 }
 
 .logo {
@@ -101,52 +92,58 @@ nav li {
   padding: 0em 1em;
 }
 
- .container {
+.container {
   width: 60em;
   margin: 0 auto;
   margin-top: 6em;
   text-align: center;
 }
 
- .thumbnail img{
-   float: left;
-   width: 33.3%;
-   height: 33.3%;
-   object-fit: cover;
- }
+.thumbnail img{
+  float: left;
+  width: 33.3%;
+  height: 33.3%;
+  object-fit: cover;
+}
 
- .port-descr {
-   width: 100%;
-   margin-bottom: 3em;
- }
+.port-descr {
+  width: 100%;
+  margin-bottom: 3em;
+}
 
- .port-img img {
-   width: 65%;
- }
+.port-img img {
+  width: 65%;
+}
 
- .about {
-   width: 75%;
-   margin: 0 auto;
-   text-align: left;
- }
- .new-position {
-   position: fixed;
-   top: 110px;
-   right: 25px;
-   text-align: left;
-   width: 250px;
-   transition: top .5s ease;
- }
- footer{
-   position: relative;
-   width: 100%;
-   height: 10em;
-   bottom: -20em;
-   left: 0;
-   margin-bottom: -20em;
-   background-color: #6AA2B8;
-   clear: both;
- }
+.new-position {
+  position: fixed;
+  // top: 110px;
+  // right: 25px;
+  text-align: left;
+  width: 250px;
+  transition: transform 700ms ease-out;
+  transform: translate(-110px, 25px);
+  h2:hover {
+    @include underline
+  }
+}
+
+.about {
+  width: 75%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+footer{
+ position: relative;
+ width: 100%;
+ height: 10em;
+ bottom: -20em;
+ left: 0;
+ margin-bottom: -20em;
+ background-color: #6AA2B8;
+ clear: both;
+}
 
  footer > p{
    color: #f7f7f7;
