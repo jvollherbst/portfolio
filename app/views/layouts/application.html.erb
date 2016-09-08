@@ -11,11 +11,22 @@
 </head>
 <body>
 <header>
-  <h1 class="logo"><%= link_to "Jasmine Vollherbst", root_path %></h1>
+  <h1 class="main-logo"><%= link_to "Jasmine Vollherbst", root_path %></h1>
 
 
   <nav>
     <ul>
+      <li>
+        <div class="categories">
+          <ul>
+            <li class="tags">All</li>
+            <li class="tags">design</li>
+            <li class="tags">logo</li>
+            <li class="tags">illustration</li>
+          </ul>
+          </div>
+        </div>
+      </li>
       <li><%= link_to "About", about_index_path %></li>
   <% if session[:current_user_id] %>
   <li><%= link_to "Welcome #{User.find(session[:current_user_id]).username}",   user_path(session[:current_user_id]) %></li>

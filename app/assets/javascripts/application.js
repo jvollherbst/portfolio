@@ -22,13 +22,27 @@ $(document).ready(function() {
     }
   });
 
-  $('select').change(function(){
-    var catSelection = "";
-    $('select option:selected').each(function() {
-      catSelection = $(this).text();
-    });
-    $('.thumbnail').hide();
-    $('.' + catSelection).show();
+  $('.tags').on('click', function(){
+    var catSelection = $(this).text();
+    if(catSelection == "All") {
+      $('.thumbnail').show();
+    } else {
+      $('.thumbnail').hide();
+      $('.' + catSelection).show();
+    }
   });
+
+  // $('select').change(function(){
+  //   var catSelection = "";
+  //   $('select option:selected').each(function() {
+  //     catSelection = $(this).text();
+  //   });
+  //   if(catSelection == "All") {
+  //     $('.thumbnail').show();
+  //   } else {
+  //     $('.thumbnail').hide();
+  //     $('.' + catSelection).show();
+  //   }
+  // });
 
 });

@@ -64,7 +64,7 @@ header {
   }
 }
 
-.logo {
+.main-logo {
   float:left;
   height: 2.5em;
   line-height: 2.5em;
@@ -117,14 +117,36 @@ nav li {
 
 .new-position {
   position: fixed;
-  // top: 110px;
-  // right: 25px;
   text-align: left;
   width: 250px;
   transition: transform 700ms ease-out;
   transform: translate(-110px, 25px);
   h2:hover {
     @include underline
+  }
+}
+
+.categories {
+  width: 200px;
+
+  .tags:first-child {
+    display: block;
+  }
+  .tags {
+    display: none;
+    text-decoration: none;
+    float: none;
+    padding: 0;
+  }
+  .tags:hover {
+    background-color: #cccccc;
+    color: #ffffff;
+  }
+  &:hover {
+    .tags {
+      background-color: #333333;
+      display: block;
+    }
   }
 }
 
@@ -191,14 +213,14 @@ footer{
      padding: 0;
    }
 
-   .logo {
+   .main-logo {
      float: none;
      text-align: center;
      margin: 0;
      padding: 0;
    }
 
-   .logo h1 {
+   .main-logo h1 {
      margin: 0;
    }
 
