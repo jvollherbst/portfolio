@@ -13,7 +13,16 @@
 // };
 
 $(document).ready(function() {
-  if($(window).innerWidth() > 480 ) {
+  var windowSize;
+  function responsive() {
+    windowSize = { width: $(window).innerWidth() };
+    $(window).resize(function() {
+      responsive();
+    });
+  };
+  // responsive();
+
+  if($(window).innerWidth() > 767 ) {
     $(window).on('scroll', function(){
       if($(window).scrollTop() > 90) {
         $("#descr").addClass('new-position');
