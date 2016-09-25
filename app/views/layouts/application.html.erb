@@ -7,11 +7,11 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300,300italic|Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Roboto+Condensed" rel="stylesheet">
 </head>
 <body>
 <header>
-  <h1 class="main-logo"><%= link_to "Jasmine Vollherbst", root_path %></h1>
+  <h1 class="main-logo"><%= link_to "JV", root_path %></h1>
 
 
   <nav>
@@ -19,6 +19,7 @@
       <li>
         <div class="categories">
           <ul>
+            <li>Sort</li>
             <li class="tags">All</li>
             <li class="tags">design</li>
             <li class="tags">logo</li>
@@ -29,7 +30,7 @@
       </li>
       <li><%= link_to "About", about_index_path %></li>
   <% if session[:current_user_id] %>
-  <li><%= link_to "Welcome #{User.find(session[:current_user_id]).username}",   user_path(session[:current_user_id]) %></li>
+  <li><%= link_to " #{User.find(session[:current_user_id]).username}",   user_path(session[:current_user_id]) %></li>
   <li><%= link_to "Create", new_image_path %></li>
   <li><%= link_to "Logout", sessions_path, method: :delete %></li>
   <% else %>

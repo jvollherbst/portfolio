@@ -13,16 +13,17 @@
 // };
 
 $(document).ready(function() {
+  if($(window).innerWidth() > 480 ) {
+    $(window).on('scroll', function(){
+      if($(window).scrollTop() > 90) {
+        $("#descr").addClass('new-position');
+      } else if($(window).scrollTop() < 90) {
+        $("#descr").removeClass('new-position');
+      }
+    });
+  }
 
-  $(window).on('scroll', function(){
-    if($(window).scrollTop() > 150) {
-      $("#descr").addClass('new-position');
-    } else if($(window).scrollTop() < 150) {
-      $("#descr").removeClass('new-position');
-    }
-  });
-
-  $('.tags').on('click', function(){
+  $(document).on('click', '.tags', function(){
     var catSelection = $(this).text();
     if(catSelection == "All") {
       $('.thumbnail').show();
