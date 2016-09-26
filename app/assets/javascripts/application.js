@@ -15,22 +15,24 @@
 $(document).ready(function() {
   var windowSize;
   function responsive() {
-    windowSize = { width: $(window).innerWidth() };
-    $(window).resize(function() {
-      responsive();
-    });
+    windowSize = { width: window.innerWidth };
+    $(window).resize(responsive);
+    return windowSize;
   };
-  // responsive();
+  responsive();
 
-  if($(window).innerWidth() > 767 ) {
-    $(window).on('scroll', function(){
+  $(window).on('scroll', function(){
+    if(windowSize.width > 767) {
       if($(window).scrollTop() > 90) {
         $("#descr").addClass('new-position');
       } else if($(window).scrollTop() < 90) {
         $("#descr").removeClass('new-position');
       }
-    });
-  }
+    } else if(windowSize.width < 767) {
+        $("#descr").removeClass('new-position');
+    }
+  });
+
 
   $(document).on('click', '.tags', function(){
     var catSelection = $(this).text();

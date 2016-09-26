@@ -63,9 +63,6 @@ header {
   }
 
   .categories {
-    .tags:first-child {
-      display: block;
-    }
     .tags {
       display: none;
       text-decoration: none;
@@ -175,7 +172,6 @@ nav li {
 .new-position {
   position: fixed;
   text-align: left;
-  // top: 90px;
   width: 25%;
   transform: translate(0, 20px);
   transition: transform 300ms ease-out;
