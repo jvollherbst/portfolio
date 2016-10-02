@@ -52,7 +52,7 @@ header {
   background-color: #f7f7f7;
   z-index: 999;
 
-  a {
+  a, li {
     letter-spacing: .0875em;
     color: #777777;
     text-transform: uppercase;
@@ -68,14 +68,22 @@ header {
       text-decoration: none;
       float: none;
       padding: 0;
+      height: 50px;
+      vertical-align: middle;
+      line-height: 50px;
+    }
+    ul {
+      width: 100px;
+      background-color: #f7f7f7;
+      margin-right: -75px;
     }
     .tags:hover {
-      background-color: #cccccc;
-      color: #ffffff;
+      color: #cccccc;
     }
     &:hover {
       .tags {
         display: block;
+        // margin-right: -62px;
       }
     }
   }

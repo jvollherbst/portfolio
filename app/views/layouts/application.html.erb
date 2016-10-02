@@ -16,10 +16,10 @@
 
   <nav>
     <ul>
-      <!-- <li>
+      <li>
         <div class="categories">
+          SORT
           <ul>
-            <li>Sort</li>
             <li class="tags">All</li>
             <li class="tags">design</li>
             <li class="tags">logo</li>
@@ -27,7 +27,7 @@
           </ul>
           </div>
         </div>
-      </li> -->
+      </li>
       <li><%= link_to "About", about_index_path %></li>
   <% if session[:current_user_id] %>
   <li><%= link_to " #{User.find(session[:current_user_id]).username}",   user_path(session[:current_user_id]) %></li>
