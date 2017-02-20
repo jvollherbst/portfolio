@@ -44,12 +44,4 @@ ActiveRecord::Schema.define(version: 20160502200010) do
     t.string "password_digest"
   end
 
-  create_table "works", force: :cascade do |t|
-    t.string "imgname"
-    t.string "category"
-    t.string "tag"
-    t.string "description"
-    t.string "imgurl"
-  end
-
 end
