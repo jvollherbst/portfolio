@@ -4,7 +4,7 @@
  */
  @mixin underline {
    transition: border-width 200ms ease-out;
-   border-bottom: .25em solid #6AA2B8;
+   border-bottom: .25em solid #0000fe;
  }
 
  html, body {
@@ -13,10 +13,10 @@
  }
 
  body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Minion Pro', serif;
   font-weight: 300;
-  background-color: #f6f6f6;
-  color: #555555;
+  background-color: #f8f4ef;
+  color: #0000fe;
   line-height: 1.75em;
 }
 
@@ -32,13 +32,12 @@
  }
 
  .homepage {
-   font-family: 'Merriweather', serif;
+   font-family: 'Minion Pro', serif;
    font-weight: 300;
-   color: #777777;
-   font-size: 1.75em;
+   font-size: 2.5em;
    letter-spacing: .025em;
-   line-height: 2em;
-   padding: 4em 2em;
+   line-height: 1.5;
+   padding: 4em 5em 2em 5em;
  }
 
 header {
@@ -49,13 +48,11 @@ header {
   padding: 0 1em;
   line-height: 6em;
   vertical-align: middle;
-  background-color: #f7f7f7;
   z-index: 999;
 
   a, li {
-    letter-spacing: .0875em;
-    color: #777777;
-    text-transform: uppercase;
+    font-size: 1.35em;
+    color: #0000fe;
     text-decoration: none;
   }
   a:hover {
@@ -90,15 +87,9 @@ header {
 }
 
 .main-logo {
-  font-size: 18px;
+  font-size: 16px;
   float: left;
   margin: 1em;
-  background-color: #6AA2B8;
-  border-radius: 100%;
-  height: 3em;
-  width: 3em;
-  text-align: center;
-  padding: 0;
   line-height: 3em;
   a {
     color: #f7f7f7;
@@ -126,7 +117,6 @@ nav li {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding-top: 75px;
 }
 
 #thumbs {
@@ -137,7 +127,8 @@ nav li {
     display: inline-block;
     margin: .5em;
     width: 25em;
-    height: 25em;
+    // height: 25em;
+    vertical-align: top;
     @media(max-width: 480px) {
       width: 100%;
       height: 100%;
@@ -153,7 +144,7 @@ nav li {
 
 .port-descr {
   h2, p {
-    font-family: "Merriweather", serif;
+    font-family: "Minion Pro", serif;
     font-weight: 300;
   }
   // p {
@@ -248,25 +239,22 @@ footer{
 
 }
 
- @media only screen and (max-width : 480px) {
+ @media only screen and (max-width : 767px) {
    .container {
      width: 95%;
-   }
-
-   .container h1 {
-     padding: 0 1em;
    }
 
    header {
      max-width: 100%;
      margin: 0;
      padding: 0;
+     line-height: 0;
    }
 
    .main-logo {
      float: none;
      text-align: center;
-     margin: 1em auto;
+     margin: .5em auto;
      padding: 0;
    }
 
@@ -275,13 +263,30 @@ footer{
    }
 
    nav {
-     max-width: 100%;
-     float: none;
-     display: none;
+      width: 100%;
+      float: none;
+      display: inline-block;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0;
+     li {
+       display: inline-block;
+       text-align: center;
+       float: none;
+       padding: 0;
+       padding-right: 1em;
+     }
    }
 
    nav:hover {
      display: inline;
+   }
+
+   .homepage {
+    font-size: 2em;
+    letter-spacing: .025em;
+    line-height: 1.4;
+    padding: 2.5em 1.2em;
    }
 
    .port-descr h2, p {
